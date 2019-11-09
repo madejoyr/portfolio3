@@ -1,0 +1,408 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip a:focus{
+/*Add the selector and rule to move the skip link to the exact top.*/
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-row-gap: 15px;
+  font-family: 'Roboto', sans-serif;
+  /* font-size: 100%; */
+
+}
+
+header{
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+  align-self: center;
+  justify-self:center;
+}
+
+.header_mobile img{
+  /* min-width: 100%; */
+  max-width: 100%;
+}
+
+header .header_desktop{
+  display: none;
+}
+
+header .nav_desktop{
+  display:none;
+}
+
+.nav{
+  grid-column: 1/span 3;
+  grid-row: 2/span 1;
+}
+
+.nav a{
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: #ccc;
+}
+
+.nav a.active {
+  background-color: #7691C4;
+  color: white;
+}
+
+.nav_desktop a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav_desktop a:hover{
+  color: grey;
+}
+
+.nav_desktop a.active {
+  text-decoration: underline;
+}
+
+#about .page_name{
+  grid-column: 1/span 3;
+  grid-row: 4/span 1;
+}
+
+.page_name{
+  grid-column: 1/span 3;
+  grid-row: 3/span 1;
+  padding: 30px;
+}
+
+#about .home-image{
+  grid-column: 1/span 3;
+  grid-row: 3/span 1;
+  align-self: center;
+  justify-self: center;
+
+}
+
+#about .home-image img{
+  max-width: 100%;
+  min-width:100%;
+}
+
+
+#about .text-block{
+  background-color: #dbe2f0;
+  /* border: 5px solid #7691C4; */
+  padding: 30px;
+
+}
+
+#about .what-it-is{
+  grid-column: 1/span 3;
+  grid-row: 5/span  1;
+}
+
+#about .who-we-are{
+  grid-column: 1/span 3;
+  grid-row: 6/span 1;
+}
+
+#about .what-we-do{
+  grid-column: 1/span 3;
+  grid-row: 7/span 1;
+}
+
+#about .get-involved{
+  grid-column: 1/span 3;
+  grid-row: 8/span 1;
+  padding: 30px;
+}
+
+#about .get-involved ul{
+  list-style: none;
+}
+
+#resources .flip-card-front{
+  grid-column: 1/span 3;
+  grid-row: 4/span 1;
+  align-self: center;
+  justify-self: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+#resources .blogs{
+  grid-column: 1/span 3;
+  grid-row: 5/span 1;
+  padding-left: 10px;
+  align-self: center;
+  justify-self: center;
+}
+
+#resources .articles{
+  grid-column: 1/span 3;
+  grid-row: 6/span 1;
+  padding-left: 10px;
+  align-self: center;
+  justify-self: center;
+}
+
+#gallery .images_desktop{
+  display: none;
+}
+
+#gallery .images_mobile{
+  grid-column: 1/span 3;
+  grid-row: 5/span 1;
+}
+
+#gallery .images_mobile ul{
+  list-style: none;
+}
+
+#gallery .images_mobile img{
+  max-width: 100%;
+  min-width:100%;
+}
+
+#contact .contact_image{
+  grid-column: 1/span 3;
+  grid-row: 5/span 1;
+}
+#contact .contact_image img{
+  max-width: 100%;
+  min-width: 100%
+}
+
+#contact .contact-form{
+  grid-column: 2/span 1;
+  grid-row: 7/span 1;
+}
+
+#contact .contact-info{
+  grid-column: 2/span 1;
+  grid-row: 6/span 1;
+}
+
+.facebook img{
+  aria-label:'facebook';
+}
+
+.foot{
+  grid-column: 1/span 3;
+  grid-row: 9/span 1;
+  background-color: #7691C4;
+
+
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+  grid-column: 2/span 1;
+  grid-row: 9/span 1;
+}
+
+
+@media screen and (min-width: 800px){
+
+
+header .header_desktop{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+header .header_mobile{
+  display: none;
+
+}
+
+.header_mobile img{
+    max-width: 100%;
+}
+
+header .nav_desktop{
+  display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+  width: 200px; }
+
+nav > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav > ul > li {
+    margin: 0 1rem;
+}
+
+.nav{
+  display: none;
+}
+
+.page_name{
+  background-color: #F5F5F5;
+  }
+
+#about .home_background{
+  grid-column: 1/4;
+  grid-template: 5/9;
+  background-color: white;
+}
+
+#about .home-image{
+  /* background-image: url("../images/holding_jar.jpg"); */
+
+  /* Set a specific height */
+  /* height: 500px; */
+
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+#resources .flip-card{
+  grid-column: 2/span 1;
+  grid-row: 4/span 1;
+  align-self: center;
+  justify-self: center;
+  /* max-width: 100%; */
+  background-color: transparent;
+  width: 485px;
+  height: 650px;
+  perspective: 1000px;
+}
+
+
+#resources .flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+ .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+ .flip-card-back {
+  background-color: #7691C4;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 50px;
+  justify-self: center;
+  align-self: center;
+
+}
+
+#resources .blogs{
+  grid-column: 1/span 1;
+  grid-row: 4/span 1;
+  padding-left: 60px;
+  align-self: center;
+  justify-self: center;
+}
+
+#resources .articles{
+  grid-column: 3/span 1;
+  grid-row: 4/span 1;
+  padding-left: 60px;
+  align-self: center;
+  justify-self: center;
+
+}
+
+#gallery .images_mobile{
+  display: none;
+}
+
+#gallery .images_desktop{
+  display: grid;
+  grid-column: 1/span 3;
+  grid-row: 5/span 1;
+}
+
+ #gallery .row{
+   display: flex;
+ }
+
+ #gallery .images_desktop .column {
+  flex: 33.33%;
+  padding: 50px;
+}
+
+#gallery .images_desktop img{
+  max-width: 23vw;
+  max-height: auto;
+
+}
+
+#gallery .images_desktop img{
+     filter:brightness(60%);
+}
+
+#gallery .images_desktop img:hover{
+     filter:brightness(100%);
+     transform: scale(1.5, 1.5);
+}
+
+#contact .contact_image{
+  background-image: url("../images/contact_image.jpg");
+
+  /* Set a specific height */
+  height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+}
