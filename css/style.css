@@ -95,6 +95,10 @@ header .nav_desktop{
   grid-column: 1/span 3;
   grid-row: 3/span 1;
   padding: 30px;
+  font-size: 25px;
+  background-color: #f9f9f9;
+  font-weight: bold;
+
 }
 
 #about main{
@@ -308,22 +312,16 @@ nav > ul > li {
 }
 
 .page_name{
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
+  font-size: 45px;
+  color: #2c2c2c;
+   letter-spacing: .05em;
+   text-shadow:
+     4px 4px 0px #d5d5d5,
+     7px 7px 0px rgba(0, 0, 0, 0.2);
   }
 
 
-#about .home-image{
-  /* background-image: url("../images/holding_jar.jpg"); */
-
-  /* Set a specific height */
-  /* height: 500px; */
-
-  /* Create the parallax scrolling effect */
-  /* background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-}
 
 #resources .resource_image{
   display: none;
@@ -448,4 +446,48 @@ nav > ul > li {
   background-size: cover;
 }
 
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+  #about main .who-we-are{
+    text-align: right;
+  }
+  #resources main .blogs{
+    grid-column: 1/span 1;
+    grid-row: 5/span 1;
+    padding-left: 200px;
+    align-self: left;
+    justify-self: left;
+  }
+
+  #resources main .articles{
+    grid-column: 3/span 1;
+    grid-row: 5/span 1;
+    padding-right: 200px;
+    align-self: right;
+    justify-self: right;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  .flip-card:hover .flip-card-inner{
+    transition: none !important;
+  }
+  #resources main .flip-card-inner{
+    transition: none !important;
+  }
+  #gallery .images_desktop img:hover{
+    transform: none !important;
+  }
+  #contact .contact_image{
+    background-attachment: scroll;
+  }
+  .skip a{
+    -webkit-transition: none !important;/* Your code here - set to default setting */
+    transition: none !important;
+  }
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
 }
