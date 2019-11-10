@@ -142,7 +142,11 @@ header .nav_desktop{
   list-style: none;
 }
 
-#resources .flip-card-front{
+#resources .flip-card{
+  display: none;
+}
+
+#resources .resource_image{
   grid-column: 1/span 3;
   grid-row: 4/span 1;
   align-self: center;
@@ -190,6 +194,7 @@ header .nav_desktop{
   grid-column: 1/span 3;
   grid-row: 5/span 1;
 }
+
 #contact .contact_image img{
   max-width: 100%;
   min-width: 100%
@@ -274,11 +279,6 @@ nav > ul > li {
   background-color: #F5F5F5;
   }
 
-#about .home_background{
-  grid-column: 1/4;
-  grid-template: 5/9;
-  background-color: white;
-}
 
 #about .home-image{
   /* background-image: url("../images/holding_jar.jpg"); */
@@ -293,7 +293,13 @@ nav > ul > li {
   background-size: cover; */
 }
 
+#resources .resource_image{
+  display: none;
+}
+
+
 #resources .flip-card{
+  display: grid;
   grid-column: 2/span 1;
   grid-row: 4/span 1;
   align-self: center;
@@ -390,6 +396,11 @@ nav > ul > li {
 #gallery .images_desktop img:hover{
      filter:brightness(100%);
      transform: scale(1.5, 1.5);
+}
+
+
+#contact .contact_image img{
+  display:none;
 }
 
 #contact .contact_image{
